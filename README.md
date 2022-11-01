@@ -9,6 +9,6 @@ Subject: Robotics
 
 Created: 10/30/2022
 
-![GUI](https://scontent.fsgn6-1.fna.fbcdn.net/v/t1.15752-9/310842908_493666889388971_5946920310756932856_n.png?_nc_cat=101&ccb=1-7&_nc_sid=ae9488&_nc_ohc=hj4HpG0gGIkAX9ZSYV7&tn=8LUejDp_5hjSQUBH&_nc_ht=scontent.fsgn6-1.fna&oh=03_AdQmG-pL6lgp73caDBGsX3dGKD1WCCjRO6Yw_MRB_W9PyA&oe=63847B46 "GUI in Matlab")
+![GUI](https://scontent.fsgn6-1.fna.fbcdn.net/v/t1.15752-9/312754259_5653311604714974_9085442505657751479_n.png?_nc_cat=101&ccb=1-7&_nc_sid=ae9488&_nc_ohc=e6Z2-Zlh4FYAX8ZBZdS&tn=8LUejDp_5hjSQUBH&_nc_ht=scontent.fsgn6-1.fna&oh=03_AdRnBipwyWEEEC4cnFyYcHgZbCA4CkoEg-q8ZnVdllfEdQ&oe=6385D100 "GUI in Matlab")
 
 ###
