@@ -7,13 +7,13 @@ z= str2num(get(handles.p3z_txt,'String'));
 pitch = str2num(get(handles.pitch3_txt,'String'));
 yaw = str2num(get(handles.yaw3_txt,'String'));
 
-rx_high_1 = -0.124+0.016; % x = z
+rx_high_1 = -0.124+0.016; 
 rx_low_1  = +0.016;
 ry_1 = 0.01;
 rz_high_1 = 0.004;
 rz_low_1 =  -0.004;
 
-P1_1 = [+rx_high_1;+ry_1;+rz_high_1];  % x = z
+P1_1 = [+rx_high_1;+ry_1;+rz_high_1];  
 P2_1 = [+rx_high_1;+ry_1;rz_low_1];
 P3_1 = [+rx_high_1;-ry_1;rz_low_1];
 P4_1 = [+rx_high_1;-ry_1;+rz_high_1];

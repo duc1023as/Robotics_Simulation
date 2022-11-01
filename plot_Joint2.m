@@ -7,10 +7,10 @@ z = str2num(get(handles.p1z_txt,'String'));
 yaw = str2num(get(handles.yaw1_txt,'String'));
 
 %plot_Link1
-r = 0.014*1.4;
-r1 = 0.01;
-h = 0.0513;
-h_high = 0.014*1.2;
+r = 0.014*1.4; % r - Joint 2
+r1 = 0.01; % r1 - Link1
+h = 0.0513;% height of Link1
+h_high = 0.014*1.2;  % Base to Link 1
 
 P1 = [+r1;+r1;-h_high ];
 P2 = [+r1;+r1;-h];
@@ -21,7 +21,7 @@ P6 = [-r1;+r1;-h];
 P7 = [-r1;-r1;-h];
 P8 = [-r1;-r1;-h_high ];
 
-Az = [cos(yaw) -sin(yaw) 0;sin(yaw) cos(yaw) 0;0 0 1];
+Az = [cos(yaw) -sin(yaw) 0;sin(yaw) cos(yaw) 0;0 0 1]; % Rotate Matrix
 
 P1_rotate = Az * P1;
 P2_rotate = Az * P2;

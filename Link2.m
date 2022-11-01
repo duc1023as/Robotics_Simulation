@@ -15,7 +15,7 @@ rx_low = 0.128 - 0.014*1.3;
 ry = 0.01;
 rz = 0.004;
 
-P1 = [+rx_high;+ry;+rz];  % x = z
+P1 = [+rx_high;+ry;+rz];  % x = z0 ; z = x0
 P2 = [+rx_high;+ry;-rz];
 P3 = [+rx_high;-ry;-rz];
 P4 = [+rx_high;-ry;+rz];
@@ -43,6 +43,7 @@ fill3(handles.axes1,[x+P1_rotate(1),x+P2_rotate(1),x+P3_rotate(1),x+P4_rotate(1)
 fill3(handles.axes1,[x+P5_rotate(1),x+P6_rotate(1),x+P7_rotate(1),x+P8_rotate(1)],[y+P5_rotate(2), y+P6_rotate(2), y+P7_rotate(2), y+P8_rotate(2) ],[z+P5_rotate(3), z+P6_rotate(3), z+P7_rotate(3), z+P8_rotate(3)],	[1 0 0],'FaceAlpha',opa);
 fill3(handles.axes1,[x+P1_rotate(1),x+P4_rotate(1),x+P8_rotate(1),x+P5_rotate(1)],[y+P1_rotate(2), y+P4_rotate(2), y+P8_rotate(2), y+P5_rotate(2) ],[z+P1_rotate(3), z+P4_rotate(3), z+P8_rotate(3), z+P5_rotate(3)],	[1 0 0],'FaceAlpha',opa);
 fill3(handles.axes1,[x+P2_rotate(1),x+P3_rotate(1),x+P7_rotate(1),x+P6_rotate(1)],[y+P2_rotate(2), y+P3_rotate(2), y+P7_rotate(2), y+P6_rotate(2) ],[z+P2_rotate(3), z+P3_rotate(3), z+P7_rotate(3), z+P6_rotate(3)],	[1 0 0],'FaceAlpha',opa);
+
 %plot Link2  ==
 
 rx_high_1 = 0.008;
@@ -51,7 +52,7 @@ ry_1 = 0.01;
 rz_high_1 = 0.008; % direct to right
 rz_low_1 =  -0.01;
 
-P1_1 = [+rx_high_1;+ry_1;+rz_high_1];  % x = z
+P1_1 = [+rx_high_1;+ry_1;+rz_high_1];  % x = z0 ; z = x0
 P2_1 = [+rx_high_1;+ry_1;rz_low_1];
 P3_1 = [+rx_high_1;-ry_1;rz_low_1];
 P4_1 = [+rx_high_1;-ry_1;+rz_high_1];
