@@ -52,7 +52,6 @@ P6_rotate_1 = Az * Ay * P6_1;
 P7_rotate_1 = Az * Ay * P7_1;
 P8_rotate_1 = Az * Ay * P8_1;
 
-%fill3(handles.axes1,[x+P1_rotate(1),x+P2_rotate(1),x+P6_rotate(1),x+P5_rotate(1)],[y+P1_rotate(2), y+P2_rotate(2), y+P6_rotate(2), y+P5_rotate(2) ],[z+P1_rotate(3), z+P2_rotate(3), z+P6_rotate(3), z+P5_rotate(3)],[0 0.4470 0.7410],'FaceAlpha',opa);
 fill3(handles.axes1,[x+P1_rotate_1(1),x+P2_rotate_1(1),x+P6_rotate_1(1),x+P5_rotate_1(1)],[y+P1_rotate_1(2), y+P2_rotate_1(2), y+P6_rotate_1(2), y+P5_rotate_1(2) ],[z+P1_rotate_1(3), z+P2_rotate_1(3), z+P6_rotate_1(3), z+P5_rotate_1(3)],[0 0.4470 0.7410],'FaceAlpha',opa);
 fill3(handles.axes1,[x+P3_rotate_1(1),x+P4_rotate_1(1),x+P8_rotate_1(1),x+P7_rotate_1(1)],[y+P3_rotate_1(2), y+P4_rotate_1(2), y+P8_rotate_1(2), y+P7_rotate_1(2) ],[z+P3_rotate_1(3), z+P4_rotate_1(3), z+P8_rotate_1(3), z+P7_rotate_1(3)],[0 0.4470 0.7410],'FaceAlpha',opa);
 fill3(handles.axes1,[x+P5_rotate(1),x+P6_rotate(1),x+P7_rotate(1),x+P8_rotate(1)],[y+P5_rotate(2), y+P6_rotate(2), y+P7_rotate(2), y+P8_rotate(2) ],[z+P5_rotate(3), z+P6_rotate(3), z+P7_rotate(3), z+P8_rotate(3)],[0 0.4470 0.7410],'FaceAlpha',opa);
