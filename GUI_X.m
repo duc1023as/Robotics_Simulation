@@ -22,7 +22,7 @@ function varargout = GUI_X(varargin)
 
 % Edit the above text to modify the response to help GUI_X
 
-% Last Modified by GUIDE v2.5 23-Oct-2022 16:42:38
+% Last Modified by GUIDE v2.5 05-Nov-2022 21:57:02
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -53,13 +53,7 @@ function GUI_X_OpeningFcn(hObject, eventdata, handles, varargin)
 % varargin   command line arguments to GUI_X (see VARARGIN)
 
 %init theta,plot OpenX
-set(handles.theta1_txt,'String',num2str(0));
-set(handles.theta2_txt,'String',num2str(0));
-set(handles.theta3_txt,'String',num2str(0));
-set(handles.theta4_txt,'String',num2str(0));
-set(handles.opacity_txt,'String',num2str(1));
-set(handles.slider_opacity,'Value',1);
-plot_Openmanipulator_X(handles);
+Reset_Param(handles);
 
 % Choose default command line output for GUI_X
 handles.output = hObject;
@@ -187,7 +181,7 @@ function theta1_txt_Callback(hObject, eventdata, handles)
 %     set(handles.slider_theta1,'Value',0);
 %     plot_Openmanipulator_X(handles);
 % end
-if(str2num(get(hObject,'String'))<-180 || str2num(get(hObject,'String'))>180)
+if(str2num(get(hObject,'String'))<-90 || str2num(get(hObject,'String'))>90)
     disp('Hi if')
     f = msgbox('Out of Workspace','Error','error');
 else
@@ -215,7 +209,7 @@ function theta2_txt_Callback(hObject, eventdata, handles)
 
 % Hints: get(hObject,'String') returns contents of theta2_txt as text
 %        str2double(get(hObject,'String')) returns contents of theta2_txt as a double
-if(str2num(get(hObject,'String'))<0|| str2num(get(hObject,'String'))>90)
+if(str2num(get(hObject,'String'))<-90|| str2num(get(hObject,'String'))>90)
     disp('Hi if')
     f = msgbox('Out of Workspace','Error','error');
 else
@@ -243,7 +237,7 @@ function theta3_txt_Callback(hObject, eventdata, handles)
 
 % Hints: get(hObject,'String') returns contents of theta3_txt as text
 %        str2double(get(hObject,'String')) returns contents of theta3_txt as a double
-if(str2num(get(hObject,'String'))<-90 || str2num(get(hObject,'String'))>0)
+if(str2num(get(hObject,'String'))<-90 || str2num(get(hObject,'String'))>90)
     disp('Hi if')
     f = msgbox('Out of Workspace','Error','error');
 else
@@ -1288,3 +1282,111 @@ function yaw_cen_txt_CreateFcn(hObject, eventdata, handles)
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
 end
+
+
+
+function x_inv_txt_Callback(hObject, eventdata, handles)
+% hObject    handle to x_inv_txt (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of x_inv_txt as text
+%        str2double(get(hObject,'String')) returns contents of x_inv_txt as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function x_inv_txt_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to x_inv_txt (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function y_inv_txt_Callback(hObject, eventdata, handles)
+% hObject    handle to y_inv_txt (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of y_inv_txt as text
+%        str2double(get(hObject,'String')) returns contents of y_inv_txt as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function y_inv_txt_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to y_inv_txt (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function z_inv_txt_Callback(hObject, eventdata, handles)
+% hObject    handle to z_inv_txt (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of z_inv_txt as text
+%        str2double(get(hObject,'String')) returns contents of z_inv_txt as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function z_inv_txt_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to z_inv_txt (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function pitch_inv_txt_Callback(hObject, eventdata, handles)
+% hObject    handle to pitch_inv_txt (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of pitch_inv_txt as text
+%        str2double(get(hObject,'String')) returns contents of pitch_inv_txt as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function pitch_inv_txt_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to pitch_inv_txt (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+% --- Executes on button press in btn_inv.
+function btn_inv_Callback(hObject, eventdata, handles)
+% hObject    handle to btn_inv (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+Inverse(handles);
+
+
+% --- Executes on button press in btn_reset.
+function btn_reset_Callback(hObject, eventdata, handles)
+% hObject    handle to btn_reset (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+Reset_Param(handles);

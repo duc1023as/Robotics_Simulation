@@ -66,6 +66,7 @@ P3 = Position(T03,P0);
 P4 = Position(T04,P0);
 P_center = Position(T0_center,P0);
 
+
 %Orientation
 O1 = Orientation(A01);
 O2 = Orientation(T02);
@@ -77,42 +78,39 @@ O_center = Orientation(T0_center);
 %Update Position and Orientation
 
 %Center point
-set(handles.px_cen_txt,'String',num2str(round(P_center(1,1),4)));
-set(handles.py_cen_txt,'String',num2str(round(P_center(2,1),4)));
-set(handles.pz_cen_txt,'String',num2str(round(P_center(3,1),4)));
+set(handles.px_cen_txt,'String',num2str(P_center(1,1)));
+set(handles.py_cen_txt,'String',num2str(P_center(2,1)));
+set(handles.pz_cen_txt,'String',num2str(P_center(3,1)));
+
 set(handles.roll_cen_txt,'String',num2str(O_center(1,1)));
 set(handles.pitch_cen_txt,'String',num2str(O_center(1,2)));
 set(handles.yaw_cen_txt,'String',num2str(O_center(1,3)));
 
 %Joint 2
-set(handles.p1x_txt,'String',num2str(round(P1(1,1),4)));
-set(handles.p1y_txt,'String',num2str(round(P1(2,1),4)));
-set(handles.p1z_txt,'String',num2str(round(P1(3,1),4)));
-%set(handles.roll1_txt,'String',num2str(round(O1(1,1)*180/pi,4)));
-%set(handles.pitch1_txt,'String',num2str(round(O1(1,2)*180/pi,4)));
-%set(handles.yaw1_txt,'String',num2str(round(O1(1,3)*180/pi,4)));
+set(handles.p1x_txt,'String',num2str(P1(1,1)));
+set(handles.p1y_txt,'String',num2str(P1(2,1)));
+set(handles.p1z_txt,'String',num2str(P1(3,1)));
+
 set(handles.roll1_txt,'String',num2str(O1(1,1)));
 set(handles.pitch1_txt,'String',num2str(O1(1,2)));
 set(handles.yaw1_txt,'String',num2str(O1(1,3)));
 
 %Joint 3
-set(handles.p2x_txt,'String',num2str(round(P2(1,1),4)));
-set(handles.p2y_txt,'String',num2str(round(P2(2,1),4)));
-set(handles.p2z_txt,'String',num2str(round(P2(3,1),4)));
-%set(handles.roll2_txt,'String',num2str(round(O2(1,1)*180/pi,4)));
-%set(handles.pitch2_txt,'String',num2str(round(O2(1,2)*180/pi,4)));
-%set(handles.yaw2_txt,'String',num2str(round(O2(1,3)*180/pi,4)));
+set(handles.p2x_txt,'String',num2str(P2(1,1)));
+set(handles.p2y_txt,'String',num2str(P2(2,1)));
+set(handles.p2z_txt,'String',num2str(P2(3,1)));
+
 set(handles.roll2_txt,'String',num2str(O2(1,1)));
 set(handles.pitch2_txt,'String',num2str(O2(1,2)));
 set(handles.yaw2_txt,'String',num2str(O2(1,3)));
 
 %Joint 4
-set(handles.p3x_txt,'String',num2str(round(P3(1,1),4)));
-set(handles.p3y_txt,'String',num2str(round(P3(2,1),4)));
-set(handles.p3z_txt,'String',num2str(round(P3(3,1),4)));
-%set(handles.roll3_txt,'String',num2str(round(O3(1,1)*180/pi,4)));
-%set(handles.pitch3_txt,'String',num2str(round(O3(1,2)*180/pi,4)));
-%set(handles.yaw3_txt,'String',num2str(round(O3(1,3)*180/pi,4)));
+
+set(handles.p3x_txt,'String',num2str(P3(1,1)));
+set(handles.p3y_txt,'String',num2str(P3(2,1)));
+set(handles.p3z_txt,'String',num2str(P3(3,1)));
+
+
 set(handles.roll3_txt,'String',num2str(O3(1,1)));
 set(handles.pitch3_txt,'String',num2str(O3(1,2)));
 set(handles.yaw3_txt,'String',num2str(O3(1,3)));
@@ -121,9 +119,11 @@ set(handles.yaw3_txt,'String',num2str(O3(1,3)));
 set(handles.p4x_txt,'String',num2str(round(P4(1,1),4)));
 set(handles.p4y_txt,'String',num2str(round(P4(2,1),4)));
 set(handles.p4z_txt,'String',num2str(round(P4(3,1),4)));
+
 set(handles.roll4_txt_disp,'String',num2str(round(O4(1,1)*180/pi,4)));
 set(handles.pitch4_txt_disp,'String',num2str(round(O4(1,2)*180/pi,4)));
 set(handles.yaw4_txt_disp,'String',num2str(round(O4(1,3)*180/pi,4)));
+
 set(handles.roll4_txt,'String',num2str(O4(1,1)));
 set(handles.pitch4_txt,'String',num2str(O4(1,2)));
 set(handles.yaw4_txt,'String',num2str(O4(1,3)));
@@ -139,8 +139,8 @@ zlabel(handles.axes1,'z');
 
 xlim(handles.axes1,[-0.38 0.38])
 ylim(handles.axes1,[-0.38 0.38])
-zlim(handles.axes1,[0 0.4])
-view(handles.axes1,-20,12);
+zlim(handles.axes1,[0 0.5])
+view(handles.axes1,67,35);
 
 
 %Axes1
