@@ -16,13 +16,13 @@ r3 = r4 - a4 *cos(-1*pitch);
 z3 = z4 - a4 *sin(-1*pitch);
 ts_th3 = a2^2 + a3^2 -(z3^2+r3^2);
 ms_th3 = 2*a2*a3;
-arccos_theta3=ts_th3/ms_th3
+arccos_theta3=ts_th3/ms_th3;
 
 if(arccos_theta3<-1 || arccos_theta3 > 1)
     f = msgbox('Out of Workspace','Error','error');
 else
     %theta3_new = -pi+ phi+ acos(ts_th3/ms_th3);
-    theta3_new = (pi+ phi + acos(ts_th3/ms_th3))-2*pi
+    theta3_new = (pi+ phi + acos(ts_th3/ms_th3))-2*pi;
     
     set(handles.slider_theta3,'Value',theta3_new*180/pi);
     set(handles.theta3_txt,'String',num2str(theta3_new*180/pi));
@@ -50,7 +50,6 @@ else
 
     set(handles.slider_theta4,'Value',theta4_new*180/pi);
     set(handles.theta4_txt,'String',num2str(theta4_new*180/pi));
-
     plot_Openmanipulator_X(handles);
 end
 end

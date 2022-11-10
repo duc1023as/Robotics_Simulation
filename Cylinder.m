@@ -1,4 +1,4 @@
- function [Cylinder,EndPlate1,EndPlate2] = Cylinder(X1,X2,r,n,cyl_color,closed,lines,opa)
+ function [Cylinder,EndPlate1,EndPlate2] = Cylinder(handles,X1,X2,r,n,cyl_color,closed,lines,opa)
 %
 % This function constructs a cylinder connecting two center points 
 % 
@@ -47,13 +47,13 @@ xx3=repmat(x3,1,2);
 % Drawing two filled cirlces to close the cylinder
 if closed==1
     hold on
-    EndPlate1=fill3(xx1(:,1),xx2(:,1),xx3(:,1),'r');
-    EndPlate2=fill3(xx1(:,2),xx2(:,2),xx3(:,2),'r');
+    EndPlate1=fill3(handles.axes1,xx1(:,1),xx2(:,1),xx3(:,1),'r');
+    EndPlate2=fill3(handles.axes1,xx1(:,2),xx2(:,2),xx3(:,2),'r');
 end
 
 % Plotting the cylinder along the X-Direction with required length starting
 % from Origin
-Cylinder=mesh(xx1,xx2,xx3);
+Cylinder=mesh(handles.axes1,xx1,xx2,xx3);
 
 % Defining Unit vector along the X-direction
 unit_Vx=[1 0 0];

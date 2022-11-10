@@ -49,5 +49,5 @@ X2_Cy=[x2 y2 z];
 n=30;
 closed=1;
 lines=0;
-[Cylinder1,EndPlate1,EndPlate2]= Cylinder(X1_Cy,X2_Cy,r,n,[0 0.4470 0.7410],closed,lines,opa);
+[Cylinder1,EndPlate1,EndPlate2]= Cylinder(handles,X1_Cy,X2_Cy,r,n,[0 0.4470 0.7410],closed,lines,opa);
 end
