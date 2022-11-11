@@ -22,7 +22,7 @@ function varargout = GUI_X(varargin)
 
 % Edit the above text to modify the response to help GUI_X
 
-% Last Modified by GUIDE v2.5 10-Nov-2022 21:21:09
+% Last Modified by GUIDE v2.5 11-Nov-2022 16:58:22
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -1429,6 +1429,98 @@ function amax_txt_Callback(hObject, eventdata, handles)
 % --- Executes during object creation, after setting all properties.
 function amax_txt_CreateFcn(hObject, eventdata, handles)
 % hObject    handle to amax_txt (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function px_tempt_txt_Callback(hObject, eventdata, handles)
+% hObject    handle to px_tempt_txt (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of px_tempt_txt as text
+%        str2double(get(hObject,'String')) returns contents of px_tempt_txt as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function px_tempt_txt_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to px_tempt_txt (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function py_tempt_txt_Callback(hObject, eventdata, handles)
+% hObject    handle to py_tempt_txt (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of py_tempt_txt as text
+%        str2double(get(hObject,'String')) returns contents of py_tempt_txt as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function py_tempt_txt_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to py_tempt_txt (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function pz_tempt_txt_Callback(hObject, eventdata, handles)
+% hObject    handle to pz_tempt_txt (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of pz_tempt_txt as text
+%        str2double(get(hObject,'String')) returns contents of pz_tempt_txt as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function pz_tempt_txt_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to pz_tempt_txt (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function pitch_tempt_txt_Callback(hObject, eventdata, handles)
+% hObject    handle to pitch_tempt_txt (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of pitch_tempt_txt as text
+%        str2double(get(hObject,'String')) returns contents of pitch_tempt_txt as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function pitch_tempt_txt_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to pitch_tempt_txt (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 

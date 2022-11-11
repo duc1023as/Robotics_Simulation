@@ -3,11 +3,20 @@ disp('Hi')
 x_cur = str2num(get(handles.p4x_txt,'String'));
 y_cur = str2num(get(handles.p4y_txt,'String'));
 z_cur = str2num(get(handles.p4z_txt,'String'));
+pitch_cur = str2num(get(handles.pitch4_txt,'String'));
 
 
 x_next = str2num(get(handles.x_inv_txt,'String'));
 y_next = str2num(get(handles.y_inv_txt,'String'));
 z_next = str2num(get(handles.z_inv_txt,'String'));
+pitch_next = str2num(get(handles.pitch_inv_txt,'String'))*pi/180;
+
+Np = 50;
+
+X = linspace(x_cur,x_next,Np);
+Y = linspace(y_cur,y_next,Np);
+Z = linspace(z_cur,z_next,Np);
+PITCH = linspace(pitch_cur,pitch_next,Np);
 
 pmax = sqrt((x_next-x_cur)^2 + (y_next-y_cur)^2 + (z_next-z_cur)^2);
 vmax = str2num(get(handles.vmax_txt,'String'));
@@ -32,7 +41,7 @@ if( abs(vmax) <= (2*abs(pmax-p0)/tf) && abs(vmax) > (abs(pmax-p0)/tf))
     p = [];
     time = [];
     time_cur = 0;
-    N = 200;
+    N = Np;
     t = linspace(0,tf,N);
     for i = 1:N
         if(t(i) < tc)
@@ -54,6 +63,13 @@ if( abs(vmax) <= (2*abs(pmax-p0)/tf) && abs(vmax) > (abs(pmax-p0)/tf))
         p =[p ; p_t];
         time  = [time ; time_cur];
         time_cur = time_cur + tf/N;
+        
+        %dynamic Inverse
+        set(handles.px_tempt_txt,'String',num2str(X(i)));
+        set(handles.py_tempt_txt,'String',num2str(Y(i)));
+        set(handles.pz_tempt_txt,'String',num2str(Z(i)));
+        set(handles.pitch_tempt_txt,'String',num2str(PITCH(i)*180/pi));
+        
         
         cla(handles.axes_p,'reset');
         grid(handles.axes_p,'on'); 

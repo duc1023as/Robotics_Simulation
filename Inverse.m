@@ -1,8 +1,14 @@
 function Inverse(handles)
-pitch = str2num(get(handles.pitch_inv_txt,'String'))*pi/180;
-px = str2num(get(handles.x_inv_txt,'String'));
-py = str2num(get(handles.y_inv_txt,'String'));
-pz = str2num(get(handles.z_inv_txt,'String'));
+% pitch = str2num(get(handles.pitch_inv_txt,'String'))*pi/180;
+% px = str2num(get(handles.x_inv_txt,'String'));
+% py = str2num(get(handles.y_inv_txt,'String'));
+% pz = str2num(get(handles.z_inv_txt,'String'));
+
+
+pitch = str2num(get(handles.pitch_tempt_txt,'String'))*pi/180;
+px = str2num(get(handles.px_tempt_txt,'String'));
+py = str2num(get(handles.py_tempt_txt,'String'));
+pz = str2num(get(handles.pz_tempt_txt,'String'));
 
 %update theta3
 a2 = 0.13;
@@ -20,6 +26,7 @@ arccos_theta3=ts_th3/ms_th3;
 
 if(arccos_theta3<-1 || arccos_theta3 > 1)
     f = msgbox('Out of Workspace','Error','error');
+    throw('Out of Workspace');
 else
     %theta3_new = -pi+ phi+ acos(ts_th3/ms_th3);
     theta3_new = (pi+ phi + acos(ts_th3/ms_th3))-2*pi;
